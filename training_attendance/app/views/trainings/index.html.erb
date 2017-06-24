@@ -1,0 +1,17 @@
+<h1> Listing Trainings </h1>
+<%= link_to 'New Training', new_training_path %>
+
+<table>
+  <tr>
+    <th>Date</th>
+    <th>Location</th>
+  </tr>
+
+  <% @trainings.each do |training| %>
+    <tr>
+      <td><%= training.date %></td>
+      <td><%= training.location %></td>
+      <td><%= link_to 'Show', training_path(training) %></td>
+    </tr>
+  <% end %>
+</table>
