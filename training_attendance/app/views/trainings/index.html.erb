@@ -5,12 +5,14 @@
   <tr>
     <th>Date</th>
     <th>Location</th>
+    <th>Count</th>
   </tr>
 
   <% @trainings.each do |training| %>
     <tr>
       <td><%= training.date %></td>
       <td><%= training.location %></td>
+      <td> 4 </td>
       <td><%= link_to 'Show', training_path(training) %></td>
     </tr>
   <% end %>
