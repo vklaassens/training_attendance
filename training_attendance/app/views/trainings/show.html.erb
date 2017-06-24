@@ -28,8 +28,10 @@
     <%= f.text_field :name %>
   </p>
   <p>
-    <%= f.label :status %><br>
-    <%= f.text_field :status %>
+    <%= f.label :Yes %>
+    <%= f.radio_button :status, "yes" %><br>
+    <%= f.label :No %>
+    <%= f.radio_button :status, "no" %>
   </p>
   <p>
     <%= f.submit %>
