@@ -6,6 +6,7 @@
     <th>Date</th>
     <th>Location</th>
     <th>Count</th>
+    <th colspan="2"></th>
   </tr>
 
   <% @trainings.each do |training| %>
@@ -14,6 +15,11 @@
       <td><%= training.location %></td>
       <td><%= training.people.where(status: "yes").count %></td>
       <td><%= link_to 'Show', training_path(training) %></td>
+      <td><%= link_to 'Edit', edit_training_path(training) %></td>
+      <td><%= link_to 'Destroy', training_path(training),
+              method: :delete,
+              data: { confirm: 'Are you sure you want to delete this training?'} %></td>
+
     </tr>
   <% end %>
 </table>

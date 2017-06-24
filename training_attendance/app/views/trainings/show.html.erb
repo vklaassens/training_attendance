@@ -38,4 +38,8 @@
   </p>
 <% end %>
 
+<%= link_to 'Edit', edit_training_path(@training) %> |
+<%= link_to 'Destroy', training_path(@training),
+        method: :delete,
+        data: { confirm: 'Are you sure you want to delete this training?'} %></td> |
 <%= link_to 'Back', trainings_path %>
