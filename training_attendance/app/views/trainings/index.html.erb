@@ -12,7 +12,7 @@
     <tr>
       <td><%= training.date %></td>
       <td><%= training.location %></td>
-      <td><%= training.people.count %></td>
+      <td><%= training.people.where(status: "yes").count %></td>
       <td><%= link_to 'Show', training_path(training) %></td>
     </tr>
   <% end %>
